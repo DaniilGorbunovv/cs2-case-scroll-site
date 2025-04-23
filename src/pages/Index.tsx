@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import CaseCard from "@/components/CaseCard";
 import CaseSpinner from "@/components/CaseSpinner";
@@ -138,10 +140,12 @@ const Index = () => {
               <h2 className="text-2xl font-bold">Популярные кейсы</h2>
               <p className="text-muted-foreground">Самые востребованные кейсы среди наших пользователей</p>
             </div>
-            <Button variant="outline" className="hidden md:flex border-cs-purple/30 hover:bg-cs-purple/10 hover:text-cs-purple">
-              <TrendingUp className="mr-2 h-4 w-4" /> 
-              Все кейсы
-            </Button>
+            <Link to="/cases">
+              <Button variant="outline" className="hidden md:flex border-cs-purple/30 hover:bg-cs-purple/10 hover:text-cs-purple">
+                <TrendingUp className="mr-2 h-4 w-4" /> 
+                Все кейсы
+              </Button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -157,10 +161,12 @@ const Index = () => {
             ))}
           </div>
           
-          <Button variant="outline" className="mt-6 w-full md:hidden border-cs-purple/30 hover:bg-cs-purple/10 hover:text-cs-purple">
-            <TrendingUp className="mr-2 h-4 w-4" /> 
-            Все кейсы
-          </Button>
+          <Link to="/cases">
+            <Button variant="outline" className="mt-6 w-full md:hidden border-cs-purple/30 hover:bg-cs-purple/10 hover:text-cs-purple">
+              <TrendingUp className="mr-2 h-4 w-4" /> 
+              Все кейсы
+            </Button>
+          </Link>
         </section>
         
         {/* Featured case section */}
