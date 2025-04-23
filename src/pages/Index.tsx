@@ -4,6 +4,25 @@ import CaseSpinner from "@/components/CaseSpinner";
 import { Button } from "@/components/ui/button";
 import { Sparkles, TrendingUp, Award } from "lucide-react";
 
+// Цвета для разных редкостей предметов
+const rarityColors = {
+  common: "border-gray-400 bg-gray-500/10",
+  uncommon: "border-blue-400 bg-blue-500/10",
+  rare: "border-purple-400 bg-purple-500/10",
+  mythical: "border-pink-400 bg-pink-500/10",
+  legendary: "border-yellow-400 bg-yellow-500/10", 
+  ancient: "border-red-400 bg-red-500/10",
+};
+
+const rarityGlows = {
+  common: "",
+  uncommon: "shadow-[0_0_15px_rgba(59,130,246,0.5)]",
+  rare: "shadow-[0_0_15px_rgba(139,92,246,0.5)]",
+  mythical: "shadow-[0_0_15px_rgba(217,70,239,0.5)]",
+  legendary: "shadow-[0_0_15px_rgba(250,204,21,0.5)]",
+  ancient: "shadow-[0_0_15px_rgba(234,56,76,0.5)]",
+};
+
 // Временные данные для демонстрации
 const featuredCase = {
   id: "cs2-dreams",
